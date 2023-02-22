@@ -1,0 +1,28 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<% 
+String query = request.getQueryString(); 
+String whichPagePara = request.getParameter("whichPage");
+String propTypePara = request.getParameter("propType");
+%>
+<% if(propTypePara == null) {%>
+  <li><a href="<%=request.getRequestURI()%>?whichPage=1#propListSection"><i class="fas fa-angle-double-left"></i></a></li>
+  <%} else {%>
+  <li><a href="<%=request.getRequestURI()%>?propType=<%=propTypePara%>&whichPage=1#propListSection"><i class="fas fa-angle-double-left"></i></a></li>
+  <%}%>
+  <% for(int i = 1; i<=pageNumber; i++) { %>
+	<% if(whichPage == i) { %>
+		<li style="width: 70px;"><span style="color: #777;">0<%=i %></span></li>
+	<% }else { if(propTypePara == null){%>
+  		<li><a href="<%=request.getRequestURI()%>?whichPage=<%=i%>#propListSection">0<%=i %></a></li>
+  	<%}else{%>
+  			<li><a href="<%=request.getRequestURI()%>?propType=<%=propTypePara%>&whichPage=<%=i%>#propListSection">0<%=i %></a></li>
+  	<%} } %>
+  <% } %>
+  
+  <% if(propTypePara == null) {%>
+  <li><a href="<%=request.getRequestURI()%>?whichPage=<%=pageNumber%>#propListSection"><i class="fas fa-angle-double-right"></i></a></li>
+  <%} else {%>
+  <li><a href="<%=request.getRequestURI()%>?propType=<%=propTypePara%>&whichPage=<%=pageNumber%>#propListSection"><i class="fas fa-angle-double-right"></i></a></li>
+  <%}%>
+

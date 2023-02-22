@@ -1,0 +1,43 @@
+.form-wrapper {
+    background: white;
+    width: 700px;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 40px auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.075);
+}
+
+.form-wrapper h1 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+}
+
+.form-wrapper textarea {
+    min-height: 80px;
+}
+
+.form-wrapper form > * + * {
+    margin-top: 14px;
+}
+
+.form-wrapper form .image-upload-wrapper {
+    padding: 8px;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-wrapper form .image-upload-wrapper label {
+    margin-bottom: 6px;
+}
+
+.form-wrapper .from-to-date-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-wrapper .from-to-date-wrapper > * {
+    width: calc(50% - 6px);
+}
+

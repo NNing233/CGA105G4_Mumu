@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" metadata-complete="false" version="4.0">
+	<display-name>CGA105G4_0121</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+	<resource-ref>
+		<description>DB Connection</description>
+		<res-ref-name>jdbc/TestDB2</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	<servlet>
+		<servlet-name>MemServlet</servlet-name>
+		<servlet-class>com.mem.controller.MemServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemServlet</servlet-name>
+		<url-pattern>/mem/mem.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PropServlet2</servlet-name>
+		<servlet-class>com.prop.controller.user.PropServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PropServlet2</servlet-name>
+		<url-pattern>/front_end/prop/prop.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PropServlet2</servlet-name>
+		<url-pattern>/back_end/prop/prop.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PropOptServlet</servlet-name>
+		<servlet-class>com.propopt.controller.user.PropOptServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PropOptServlet</servlet-name>
+		<url-pattern>/front_end/prop/propOpt.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ImageServlet</servlet-name>
+		<servlet-class>com.image.controller.ImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ImageServlet</servlet-name>
+		<url-pattern>/ImageServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogInOutServlet</servlet-name>
+		<servlet-class>com.mem.controller.LogInOutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogInOutServlet</servlet-name>
+		<url-pattern>/front_end/log.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ProfilePhotoReaderServlet</servlet-name>
+		<servlet-class>com.mem.controller.ProfilePhotoReaderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProfilePhotoReaderServlet</servlet-name>
+		<url-pattern>/front_end/mem/photo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MemberServlet</servlet-name>
+		<servlet-class>com.mem.controller.MemberServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberServlet</servlet-name>
+		<url-pattern>/front_end/member.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MemberServlet</servlet-name>
+		<url-pattern>/front_end/mem/member.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MemberServlet</servlet-name>
+		<url-pattern>/back_end/mem/member.do</url-pattern>
+	</servlet-mapping>
+	
+	 <servlet>
+	    <servlet-name>MailServlet</servlet-name>
+	    <servlet-class>com.mail.util.MailServlet</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+	    <servlet-name>MailServlet</servlet-name>
+	    <url-pattern>/front_end/mem/sendMail</url-pattern>
+	  </servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>AdminLoginoutServlet</servlet-name>
+		<servlet-class>com.admin.controller.AdminLoginoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminLoginoutServlet</servlet-name>
+		<url-pattern>/backend/adminlogin.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AccessManageServlet</servlet-name>
+		<servlet-class>com.adminaccessmanage.controller.AccessManageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AccessManageServlet</servlet-name>
+		<url-pattern>/back_end/adminaccessmanage/accessManage</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AdminServlet</servlet-name>
+		<servlet-class>com.admin.controller.AdminServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminServlet</servlet-name>
+		<url-pattern>/back_end/admin/admin.do</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+	<servlet>
+		<servlet-name>PropReviewServlet</servlet-name>
+		<servlet-class>com.prop.controller.admin.PropReviewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PropReviewServlet</servlet-name>
+		<url-pattern>/back_end/prop/propReview.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>PropReportServlet</servlet-name>
+		<servlet-class>com.propreport.controller.user.PropReportServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PropReportServlet</servlet-name>
+		<url-pattern>/front_end/prop/propReport.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>PropReportReviewServlet</servlet-name>
+		<servlet-class>com.propreport.controller.admin.PropReportReviewServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PropReportReviewServlet</servlet-name>
+		<url-pattern>/back_end/prop/propReport.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SelectPropProdReviewServlet</servlet-name>
+		<servlet-class>com.propprodreview.controller.SelectPropProdReviewServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SelectPropProdReviewServlet</servlet-name>
+		<url-pattern>/front_end/prop/selectPropProdReview.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddPropProdReviewServlet</servlet-name>
+		<servlet-class>com.propprodreview.controller.AddPropProdReviewServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AddPropProdReviewServlet</servlet-name>
+		<url-pattern>/front_end/prop/selectProposalOption.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PropRrodReviewServlet</servlet-name>
+		<servlet-class>com.propprodreview.controller.PropRrodReviewServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PropRrodReviewServlet</servlet-name>
+		<url-pattern>/back_end/prop/propRrodReview.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PropRrodReviewServlet</servlet-name>
+		<url-pattern>/front_end/prop/propRrodReview.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ArtCarouselServlet</servlet-name>
+		<servlet-class>com.artcarousel.controller.ArtCarouselServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ArtCarouselServlet</servlet-name>
+		<url-pattern>/back_end/artcarousel.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ArtCarouselServlet</servlet-name>
+		<url-pattern>/front_end/artcarousel/artcarousel.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ArtTypeServlet</servlet-name>
+		<servlet-class>com.arttype.controller.ArtTypeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ArtTypeServlet</servlet-name>
+		<url-pattern>/back_end/arttype/arttype.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ArtServlet</servlet-name>
+		<servlet-class>com.art.controller.ArtServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ArtServlet</servlet-name>
+		<url-pattern>/back_end/art/art.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ArtServlet</servlet-name>
+		<url-pattern>/front_end/art/art.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ArtTypelistServlet</servlet-name>
+		<servlet-class>com.art.controller.ArtTypelistServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ArtTypelistServlet</servlet-name>
+		<url-pattern>/front_end/art/ArtTypelist.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CommentServlet</servlet-name>
+		<servlet-class>com.comment.controller.CommentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CommentServlet</servlet-name>
+		<url-pattern>/front_end/art/Comment.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CommentServlet</servlet-name>
+		<url-pattern>/back_end/art/Comment.do</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>OrderListServlet</servlet-name>
+		<servlet-class>com.orderlist.controller.OrderListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderListServlet</servlet-name>
+		<url-pattern>/back_end/order/orderList.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CouponServlet</servlet-name>
+		<servlet-class>com.coupon.controller.CouponServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CouponServlet</servlet-name>
+		<url-pattern>/back_end/coupon/coupon.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>OrderServlet</servlet-name>
+		<servlet-class>com.order.controller.OrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderServlet</servlet-name>
+		<url-pattern>/back_end/order/order.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OrderServlet</servlet-name>
+		<url-pattern>/front_end/order/order.do</url-pattern>
+	</servlet-mapping>
+
+	<!--******************** 以下是阿寬的******************* -->
+	<!-- 商城 start -->
+	<servlet>
+		<servlet-name>ShopServlet</servlet-name>
+		<servlet-class>com.shop.controller.ShopServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShopServlet</servlet-name>
+		<url-pattern>/front_end/shop/shop.do</url-pattern>
+	</servlet-mapping>
+	<!-- 購物車API -->
+	<servlet>
+		<servlet-name>ShopCartListServlet</servlet-name>
+		<servlet-class>com.shoppingcartlist.controller.ShoppingCartListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShopCartListServlet</servlet-name>
+		<url-pattern>/front_end/shop/shopCartList.do</url-pattern>
+	</servlet-mapping>
+	<!-- 商城品項明細API -->
+	<servlet>
+		<servlet-name>ShopServletMumu</servlet-name>
+		<servlet-class>com.shop.controller.ShopServlet_mumu</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShopServletMumu</servlet-name>
+		<url-pattern>/front_end/shop/productDetail.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 商城首頁 圖片API -->
+	<servlet>
+		<servlet-name>ShopProdImageServlet</servlet-name>
+		<servlet-class>com.shop.controller.ShopProdImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShopProdImageServlet</servlet-name>
+		<url-pattern>/front_end/shop/getImage.do</url-pattern>
+	</servlet-mapping>
+	<!-- 商品選項 圖片API -->
+	<servlet>
+		<servlet-name>ProdOptImageServlet</servlet-name>
+		<servlet-class>com.prodopt.controller.ProdOptImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProdOptImageServlet</servlet-name>
+		<url-pattern>/front_end/shop/getPordOptImage.do</url-pattern>
+	</servlet-mapping>
+	<!-- for listAll jsp test -->
+	<servlet-mapping>
+		<servlet-name>ShopProdImageServlet</servlet-name>
+		<url-pattern>/shop/getImage.do</url-pattern>
+	</servlet-mapping>
+	<!-- 商城 end -->
+
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404Page.html</location>
+	</error-page>
+
+
+
+	<filter>
+		<filter-name>BackendFilter</filter-name>
+		<filter-class>com.mem.filter.LoginFilter</filter-class>
+	</filter>
+	<!--映射过滤器 -->
+	<filter-mapping>
+		<filter-name>BackendFilter</filter-name>
+		<!--“/*”表示拦截所有的请求 -->
+		<url-pattern>/back_end/*</url-pattern>
+	</filter-mapping>
+
+
+<!-- 	<request-character-encoding>UTF-8</request-character-encoding> -->
+<!-- 	<response-character-encoding>UTF-8</response-character-encoding> -->
+
+</web-app>
